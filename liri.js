@@ -17,15 +17,15 @@ switch (operand) {
             console.log(response.data[0].venue)
             var jsonData = response.data[0];
 
-            var songData = [
+            var bandData = [
                 "Name: " + jsonData.venue.name,
                 "Location: " + jsonData.venue.city + ", " + jsonData.venue.region,
                 "Date: " + jsonData.datetime
             ].join("\n\n");
 
-            fs.appendFile("log.txt", songData + divider, function (err) {
+            fs.appendFile("log.txt", bandData + divider, function (err) {
                 if (err) throw err;
-                console.log(songData);
+                console.log(bandData);
             });
         })
 
@@ -35,12 +35,31 @@ switch (operand) {
         spotify
             .search({ type: "track", query: term })
             .then(function (response) {
-                console.log(response.tracks.items[0]);
+                // console.log(response.tracks.items[19]);
+                var jsonData = response.tracks.items[19];
+
+                var theArtists = []
+
+                for (var i = 0; i < jsonData.artists.length; i++) {
+                    theArtists[i] = jsonData.artists[i].name
+                }
+
+                var songData = [
+                    "Artist(s): " + theArtists.join(", "),
+                    "Name: " + jsonData.name,
+                    "Location: " + jsonData.preview_url,
+                    "Date: " + jsonData.album.name
+                ].join("\n\n");
+
+                fs.appendFile("log.txt", songData + divider, function (err) {
+                    if (err) throw err;
+                    console.log(songData);
+                });
             })
             .catch(function (err) {
                 console.log(err);
             });
-            
+
         break;
 
     case "movie-this":
