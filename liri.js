@@ -38,7 +38,7 @@ function liri(){switch (operand) {
         spotify
             .search({ type: "track", query: term })
             .then(function (response) {
-                var jsonData = response.tracks.items[response.tracks.items.length - 1];
+                var jsonData = response.tracks.items[0];
 
                 var theArtists = []
 
@@ -103,8 +103,6 @@ function liri(){switch (operand) {
                   return console.log(error);
                 }
               
-                console.log(data);
-              
                 var dataArr = data.split(",");
                 
                 dataArr[1] = dataArr[1].replace(/["]+/g, '');
@@ -126,5 +124,3 @@ function liri(){switch (operand) {
 }}
 
 liri()
-
-//'https://api.spotify.com/v1/tracks/3DYVWvPh3kGwPasp7yjahc'
