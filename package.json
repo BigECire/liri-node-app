@@ -19,6 +19,7 @@
   "homepage": "https://github.com/BigECire/liri-node-app#readme",
   "dependencies": {
     "dotenv": "^8.0.0",
-    "node-spotify-api": "^1.1.1"
+    "node-spotify-api": "^1.1.1",
+    "axios": "^0.18.0"
   }
 }
