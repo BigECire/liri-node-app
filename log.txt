@@ -5,3 +5,40 @@ Location: Stateline, NV
 Date: 2019-07-07T19:00:00
 ------------------------------------------------------------
 
+Show: [object Object]
+
+Genre(s): [object Object]
+
+Rating: [object Object]
+
+Network: [object Object]
+
+Summary: [object Object]
+------------------------------------------------------------
+
+Moive: Mr. Nobody
+
+Year: 2009
+
+IMDB Rating: 7.8/10
+
+Rotten Tomatoes Rating: 67%
+
+Country: Belgium, Germany, Canada, France, USA, UK
+
+Language: English, Mohawk
+
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+------------------------------------------------------------
+
+Artist(s): Ace of Base
+
+Name: The Sign
+
+Location: https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=256e97674a6d499ab47073d920026756
+
+Date: Greatest Hits
+------------------------------------------------------------
+

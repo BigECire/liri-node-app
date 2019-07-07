@@ -14,7 +14,6 @@ switch (operand) {
 
         var URL = "https://rest.bandsintown.com/artists/" + term + "/events?app_id=codingbootcamp"
         axios.get(URL).then(function (response) {
-            console.log(response.data[0].venue)
             var jsonData = response.data[0];
 
             var bandData = [
@@ -35,7 +34,6 @@ switch (operand) {
         spotify
             .search({ type: "track", query: term })
             .then(function (response) {
-                // console.log(response.tracks.items[19]);
                 var jsonData = response.tracks.items[19];
 
                 var theArtists = []
@@ -47,8 +45,8 @@ switch (operand) {
                 var songData = [
                     "Artist(s): " + theArtists.join(", "),
                     "Name: " + jsonData.name,
-                    "Location: " + jsonData.preview_url,
-                    "Date: " + jsonData.album.name
+                    "Preview: " + jsonData.preview_url,
+                    "Album: " + jsonData.album.name
                 ].join("\n\n");
 
                 fs.appendFile("log.txt", songData + divider, function (err) {
@@ -64,9 +62,28 @@ switch (operand) {
 
     case "movie-this":
 
-        axios.get(URL).then(function (response) {
-            console.log(response)
-        })
+            var URL = "http://www.omdbapi.com/?t=" + term + "&y=&plot=short&apikey=trilogy";
+
+            axios.get(URL).then(function(response) {
+
+              var jsonData = response.data;
+        
+              var movieData = [
+                "Moive: " + jsonData.Title,
+                "Year: " + jsonData.Year,
+                "IMDB Rating: " + jsonData.Ratings[0].Value,
+                "Rotten Tomatoes Rating: " + jsonData.Ratings[1].Value,
+                "Country: " + jsonData.Country,
+                "Language: " + jsonData.Language,
+                "Plot: " + jsonData.Plot,
+                "Actors: " + jsonData.Actors
+              ].join("\n\n");
+        
+              fs.appendFile("log.txt", movieData + divider, function(err) {
+                if (err) throw err;
+                console.log(movieData);
+              });
+            });
 
         break;
 
