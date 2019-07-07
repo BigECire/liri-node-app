@@ -9,7 +9,7 @@ var operand = process.argv[2];
 var term = process.argv.slice(3).join(" ");
 var divider = "\n------------------------------------------------------------\n\n";
 
-switch (operand) {
+function liri(){switch (operand) {
     case "concert-this":
 
         var URL = "https://rest.bandsintown.com/artists/" + term + "/events?app_id=codingbootcamp"
@@ -31,10 +31,14 @@ switch (operand) {
         break;
     case "spotify-this-song":
 
+        if(!term){
+            term = "The Sign"
+        }
+
         spotify
             .search({ type: "track", query: term })
             .then(function (response) {
-                var jsonData = response.tracks.items[19];
+                var jsonData = response.tracks.items[response.tracks.items.length - 1];
 
                 var theArtists = []
 
@@ -61,6 +65,10 @@ switch (operand) {
         break;
 
     case "movie-this":
+
+            if(!term){
+                term = "Mr. Nobody"
+            }
 
             var URL = "http://www.omdbapi.com/?t=" + term + "&y=&plot=short&apikey=trilogy";
 
@@ -89,15 +97,34 @@ switch (operand) {
 
     case "do-what-it-says":
 
-        axios.get(URL).then(function (response) {
-            console.log(response)
-        })
+            fs.readFile("random.txt", "utf8", function(error, data) {
+
+                if (error) {
+                  return console.log(error);
+                }
+              
+                console.log(data);
+              
+                var dataArr = data.split(",");
+                
+                dataArr[1] = dataArr[1].replace(/["]+/g, '');
+              
+                console.log(dataArr);
+
+                operand = dataArr[0];
+                term = dataArr[1];
+              
+                liri()
+
+              });
 
         break;
 
 
     default:
-        outputNum = "Not a recognized command";
-}
+        console.log("Not a recognized command");
+}}
+
+liri()
 
 //'https://api.spotify.com/v1/tracks/3DYVWvPh3kGwPasp7yjahc'
