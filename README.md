@@ -41,4 +41,15 @@ If "do-what-it-says" command is used, Liri will do whatever the random.txt file 
 ![code](images\Screenshot14.png)
 ![result](images\Screenshot15.png)
 
+###  Technologies used
+
+* dotenv
+* node-spotify-api
+* axios
+* fs
+* node.js
+* Node Spotify API
+* Town Artist Events API
+* OMDB API
+
 I am the developer for this application.
