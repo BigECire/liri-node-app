@@ -21,25 +21,25 @@ The first thing you need to do to use Lorrie is to type into the console 'node l
 
 The "concert-this" command can be used to find the next venue where a band will be playing.
 ![code](/images/Screenshot4.png)
-![result](images\Screenshot5.png)
+![result](/images/Screenshot5.png)
 
 The "spotify-this-song" command can be used to find information on the song that you searched for.  
-![code](images\Screenshot6.png)
-![result](images\Screenshot7.png)
+![code](/images/Screenshot6.png)
+![result](/images/Screenshot7.png)
 If you do not put in a search term, Liri will automatically search for **The Sign**.
-![code](images\Screenshot8.png)
-![result](images\Screenshot9.png)
+![code](/images/Screenshot8.png)
+![result](/images/Screenshot9.png)
 
 The "movie-this" command can be used to find information on the movie you searched for.  
-![code](images\Screenshot10.png)
-![result](images\Screenshot11.png)
+![code](/images/Screenshot10.png)
+![result](/images/Screenshot11.png)
 If you do not enter in a movie for it to search, Liri will automatically search for **Mr. Nobody**
-![code](images\Screenshot12.png)
-![result](images\Screenshot13.png)
+![code](/images/Screenshot12.png)
+![result](/images/Screenshot13.png)
 
 If "do-what-it-says" command is used, Liri will do whatever the random.txt file says to do.
-![code](images\Screenshot14.png)
-![result](images\Screenshot15.png)
+![code](/images/Screenshot14.png)
+![result](/images/Screenshot15.png)
 
 ###  Technologies used
 
