@@ -20,7 +20,7 @@ For the "do-what-it-says" command, the variable that stores the command and the 
 The first thing you need to do to use Lorrie is to type into the console 'node liri', followed by the command you want to use, and, if applicable, the search term.
 
 The "concert-this" command can be used to find the next venue where a band will be playing.
-![code](images\Screenshot4.png)
+![code](/images/Screenshot4.png)
 ![result](images\Screenshot5.png)
 
 The "spotify-this-song" command can be used to find information on the song that you searched for.  
